@@ -1,6 +1,6 @@
 # 版权信息
 
-- 书名：2pat
+- 书名：pat
 - 作者：Yuan Jun
 - Public Domain
 
@@ -22,7 +22,7 @@
 
 若本书内容涉及侵犯您的版权，请主动联系我们。
 
-- 邮箱：yuanjun.ahau@gmail.com
-- 更新时间：Sun Oct  4 21:48:30 CST 2015
+- 邮箱：ask.yuanjun@gmail.com
+- 更新时间：Sun Oct 11 12:56:17 CST 2015
 
 [1]: http://www.patest.cn/ "Programming Ability Test，简称PAT"
