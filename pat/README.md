@@ -1,7 +1,7 @@
 # 版权信息
 
-- 书名：pat
-- 作者：Yuan Jun
+- 书名：PAT-b-practise
+- 作者：YUAN Jun
 - Public Domain
 
 本书内容为「[PAT][1]」乙级部分试题及示例代码。
@@ -12,13 +12,10 @@
 
 - GitBook
 - GitHub
-- OS X EI Capitan
-- GNU bash
-- VIM
-- LLVM
+- Bash
+- Vim
+- GCC
 - Git
-- TextEdit
-- Google Chrome
 
 若本书内容涉及侵犯您的版权，请主动联系我们。
 
