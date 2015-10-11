@@ -10,8 +10,6 @@
 
 本书编写所用到的工具列表：
 
-- GitBook
-- GitHub
 - Bash
 - Vim
 - GCC
