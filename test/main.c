@@ -1,42 +1,34 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int main(void) {
-	int cnt = 0;
-	scanf("%d", &cnt);
+int main(void)
+{
+	size_t size = 110000;
+	int *is_prime = malloc(size * sizeof(int));
+	for (size_t i = 2; i < size; i++)
+		is_prime[i] = 1;
+	
+	for (size_t i = 2; i < size; i++)
+		if (is_prime[i])
+			for (size_t j = 2 * i; j < size; j += i)
+				is_prime[j] = 0;
 
-	const int size = 101;
-	char x[size];
-	for (int i = 0; i < cnt; i++) {
-		scanf("%s", x);
-		int times[] = {0, 0, 0};
-		int has_p = 0, has_t = 0;
-		for (int i = 0, j = 0; x[i] != '\0'; i++) {
-			switch (x[i]) {
-			case 'A': amount[j]++; break;
-			case 'P': {
-				if (p == 0) {
-					j++; has_p = 1;
-				} else {
-					goto NO;
-				}
-				break;
+	size_t begin, end, count = 0;
+	scanf("%zu %zu", &begin, &end);
+
+	for (size_t i = 0; count < end; i++) {
+		if (is_prime[i]) {
+			count++;
+			if (count >= begin) {
+				if ((count - begin) % 10 != 0)
+					putchar(' ');
+				printf("%zu", i);
+				if ((count - begin) % 10 == 9)
+					putchar('\n');
 			}
-			case 'T': {
-				if (p == 1 && t == 0) {
-					j++; t = 1;
-				} else {
-					goto NO;
-				}
-				break;
-			default : goto NO; break;
-			}
-		}
-		if (p == 1 && t == 1 && amount[1] != 0 && 
-			amount[0]*amount[1] == amount[2]) {
-			printf("YES\n");
-		} else {
-			NO: printf("NO\n");
 		}
 	}
+
+	free(is_prime);
 	return 0;
 }
